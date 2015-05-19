@@ -1,0 +1,11 @@
+include widgets/widgets
+include navbar
+include sidebar
+doctype html
+html(lang='fr')
+	head
+		include inc/header
+	body.background-dark
+		include inc/blame
+		block content
+		include inc/scripts

@@ -1,0 +1,80 @@
+mixin feeds
+	section.widget.large
+		header
+			h4
+				i.eicon-share
+				| Feed
+			.actions
+				button.btn.btn-transparent.btn-xs
+					| Show All
+					i.fa.fa-arrow-down
+		.body
+			#feed.feed
+				.wrapper
+					.vertical-line
+					section.feed-item
+						.icon.pull-left
+							i.fa.fa-comment
+						.feed-item-body
+							.text
+								a(href='#') John Doe
+								| commented on
+								a(href='#') What Makes Good Code Good
+								| .
+							.time.pull-left
+								| 3 h
+					section.feed-item
+						.icon.pull-left
+							i.fa.fa-check.color-green
+						.feed-item-body
+							.text
+								a(href='#') Merge request #42
+								| has been approved by
+								a(href='#') Jessica Lori
+								| .
+							.time.pull-left
+								| 10 h
+					section.feed-item
+						.icon.pull-left
+							img.img-circle(src='img/14.jpg', alt='')
+						.feed-item-body
+							.text
+								| New user
+								a(href='#') Greg Wilson
+								| registered.
+							.time.pull-left
+								| Today
+					section.feed-item
+						.icon.pull-left
+							i.fa.fa-bolt.color-orange
+						.feed-item-body
+							.text
+								| Server fail level raises above normal.
+								a(href='#') See logs
+								| for details.
+							.time.pull-left
+								| Yesterday
+					section.feed-item
+						.icon.pull-left
+							i.eicon-database
+						.feed-item-body
+							.text
+								a(href='#') Database usage report
+								| is ready.
+							.time.pull-left
+								| Yesterday
+					section.feed-item
+						.icon.pull-left
+							i.fa.fa-shopping-cart
+						.feed-item-body
+							.text
+								a(href='#') Order #233985
+								| needs additional processing.
+							.time.pull-left
+								| Wednesday
+					section.feed-item
+						.icon.pull-left
+							i.fa.fa-arrow-down
+						.feed-item-body
+							.text
+								a(href='#') Load more...

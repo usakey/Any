@@ -1,0 +1,18 @@
+mixin controller(args,script1, script2)
+	section.widget
+		header
+			h4
+				i.fa.fa-cogs
+				| !{args.title}
+		.body
+			.well.well-sm
+				blockquote Light switch
+				.row.margin-bottom.text-align-center
+					.col-md-12
+						.btn-group(data-toggle='buttons')
+							label.btn.btn-success#option1label
+								input#option1(type='radio', name='options',onchange=script1)
+								| Stop
+							label.btn.btn-success.active#option2label
+								input#option2(type='radio', name='options',onchange=script2)
+								| Start

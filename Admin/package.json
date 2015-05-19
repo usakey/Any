@@ -1,0 +1,36 @@
+{
+  "name": "ANYProjectSite",
+  "version": "0.2.0",
+  "author": "The ANY Team",
+  "description": "A simple boilerplate for building a search engine admin interface",
+  "contributors": [
+    {
+      "name": "ANY",
+      "email": "@gmail.com"
+    }
+  ],
+  "main": "./server.js",
+  "scripts": {"start": "node server.js"},
+  "keywords": [
+    "nodejs",
+    "html5",
+    "express"
+  ],
+  "dependencies": {
+    "express": "*",
+    "jade": "*",
+    "my-ip":"*",
+    "pagination":"*",
+    "urlencode":"*",
+    "request":"*"
+  },
+  "private": true,
+  "noAnalyze": true,
+  "license": "proprietary",
+  "publishConfig": {
+	"registry": "<global registry>"
+  },
+  "engines": {
+    "node": ">=0.6.14"
+  }
+}

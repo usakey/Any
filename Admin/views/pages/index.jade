@@ -1,0 +1,86 @@
+extends ../layout
+include ../widgets/search
+
+mixin search-result(elem)
+	section.search-result
+		h4
+			a(href=elem.link.full) !{elem.title}
+		p.text-success
+			small !{elem.link.origin}
+		p !{elem.summary}
+
+mixin pagination(pagination)
+	ul.pagination
+		// First
+		if (pagination.current>2)
+			li
+				a(href=pagination.prelink+'1') First
+		else
+			li(class='active')
+				a(href='#') First
+		// Previous
+		if(pagination.previous==null)
+			li(class='active')
+				a(href='#') Prev
+		else
+			li
+				a(href=pagination.prelink+pagination.previous) Prev
+		// Page numbers
+		each pagenum in pagination.range
+			if (pagination.current==pagenum)
+				li(class='active')
+					a(href='#') !{pagenum}
+			else
+				li
+					a(href=pagination.prelink+pagenum) !{pagenum}
+		// Next
+		if(pagination.next==null)
+			li(class='active')
+				a(href='#') Next
+		else
+			li
+				a(href=pagination.prelink+pagination.next) Next
+		// Last
+		if (pagination.current<pagination.last-3)
+			li
+				a(href=pagination.prelink+pagination.last) Last
+		else
+			li(class='active')
+				a(href='#') Last
+
+block content
+	include ../inc/logo
+	+sidebar(args.sidebar)
+	.wrap
+		header.page-header
+			+navbar(args.navbar)
+		.content.container
+			.row
+				.col-md-12
+					h2.page-title
+						| Search Results
+						small Search result and form
+			.row
+				.col-md-8.col-md-offset-2
+					+search({target:'/index',default:'Keywords: Node.js, History',body: 'Search'})
+			.row
+				.col-md-10.col-md-offset-1
+					section.widget.padding-increased
+						header
+							h4
+								| Search Results
+							hr
+						.body.no-margin
+							each results, key in args.search.results
+								section.widget
+									header
+										h4
+											i.fa.fa-book
+											| Cluster: !{key}
+									each result in results
+										+search-result(result)
+							.text-align-center
+								//if(pagination != undefined)
+								+pagination(args.search.pagination)
+		.content.container.row
+			include ../inc/footer

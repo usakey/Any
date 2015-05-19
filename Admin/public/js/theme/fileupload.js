@@ -1,0 +1,1 @@
+$(function(){"use strict";var a=$("#fileupload");a.fileupload({url:"server/php/",dropZone:$("#dropzone")}),a.fileupload("option","redirect",window.location.href.replace(/\/[^\/]*$/,"/cors/result.html?%s")),$.ajax({url:a.fileupload("option","url"),dataType:"json",context:a[0]}).done(function(a){$(this).fileupload("option","done").call(this,null,{result:a})})});

@@ -1,0 +1,1 @@
+$(function(){$(".widget-container").sortable({connectWith:".widget-container",iframeFix:!1,items:".widget",opacity:.8,helper:"original",revert:!0,forceHelperSize:!0,placeholder:"widget widget-placeholder",forcePlaceholderSize:!0,tolerance:"pointer"})});

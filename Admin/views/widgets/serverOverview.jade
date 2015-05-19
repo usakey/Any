@@ -1,0 +1,30 @@
+mixin serverOverview
+	section.widget
+		header
+			h4
+				i.fa.fa-fire
+				| Server Overview 
+		.body
+			ul.server-stats
+				li
+					.key.pull-right CPU
+					.stat
+						.info 60% / 37°C / 3.3 Ghz
+						.progress.progress-small
+							.progress-bar.progress-bar-danger(style='width: 70%;')
+				li
+					.key.pull-right Mem
+					.stat
+						.info 29% / 4GB (16 GB)
+						.progress.progress-small
+							.progress-bar(style='width: 29%;')
+				li
+					.key.pull-right LAN
+					.stat
+						.info
+							| 6 Mb/s
+							i.fa.fa-caret-down
+							| 3 Mb/s
+							i.fa.fa-caret-up
+						.progress.progress-small
+							.progress-bar.progress-bar-inverse(style='width: 48%;')

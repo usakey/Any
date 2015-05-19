@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Program Files/PostgreSQL/9.3/postgresql-9.3-1100.jdbc41.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/tika-app-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-4.6.1/core/lucene-core-4.6.1.jar" sourcepath="lib/src-lucene/lucene-4.6.1/core/src"/>
+	<classpathentry kind="lib" path="lib/lucene-4.6.1/analysis/common/lucene-analyzers-common-4.6.1.jar" sourcepath="lib/src-lucene/lucene-4.6.1/analysis/common"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,30 @@
+{
+  "name": "ANYProjectSite",
+  "version": "0.1.0",
+  "author": "The ANY Team",
+  "description": "A simple boilerplate for building a search engine interface",
+  "contributors": [
+    {
+      "name": "ANY",
+      "email": "@gmail.com"
+    }
+  ],
+  "main": "./server.js",
+  "keywords": [
+    "nodejs",
+    "html5",
+    "express"
+  ],
+  "dependencies": {
+    "jade": "*",
+    "express": "~3.1.0"
+  },
+  "noAnalyze": true,
+  "license": "proprietary",
+  "publishConfig": {
+	"registry": "<global registry>"
+  },
+  "engines": {
+    "node": ">=0.6.14"
+  }
+}

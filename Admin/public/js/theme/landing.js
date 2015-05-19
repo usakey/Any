@@ -1,0 +1,1 @@
+$(function(){$(".back-to-top").on("click",function(){return $("html, body").animate({scrollTop:0},"fast"),!1})});

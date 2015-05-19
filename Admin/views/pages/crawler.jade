@@ -1,0 +1,32 @@
+extends ../layout
+include ../widgets/controller
+
+block content
+	include ../inc/logo
+	+sidebar(args.sidebar)
+	.wrap
+		header.page-header
+			+navbar(args.navbar)
+		.content.container
+			.row
+				.col-md-12
+					h2.page-title
+						| Control Panel
+						small Crawler
+			.row
+				.col-md-4
+					section.widget
+						header
+							h4
+								i.fa.fa-book
+								| Logs
+						.body
+							.well.well-sm
+								.row.margin-bottom.text-align-center
+								| test
+
+				.col-md-4
+					-var args_controller= {title:'Control panel'}
+					+controller(args_controller)
+				.col-md-3
+					+serverOverview

@@ -1,0 +1,41 @@
+create table staff 
+(
+    id int(3) auto_increment not null primary key,
+    name varchar(50), 
+    age int(3), 
+    sex varchar(50),
+    address varchar(50), 
+    depart varchar(50), 
+    worklen varchar(50),
+    wage varchar(50)
+); 
+
+	insert into urlist (url) values ('D:\\My Documents\\eclipse_workspace\\Index\\data\\txt\\zmm.txt') ;
+		create table urlist (
+			id int(10) auto_increment not null primary key,
+			url varchar(200) not null
+		);
+		
+		create table wordlist (
+			id int(10) auto_increment not null primary key,
+			word varchar(30) not null
+		);
+				
+		createString = "create table wordlist ("
+				+ "id int(10) auto_increment not null primary key,"
+				+ "url varchar(30) not null" 
+				+ ")";	
+				
+		createString = "create table wordlocation ("
+				+ "id int(20) auto_increment not null primary key,"
+				+ "urlid int(10) not null,"
+				+ "wordid int(10) not null,"
+				+ "location int(10) not null" 
+				+ ")";	
+				
+		select w0.urlid, w0.location, w1.location
+		from 	wordlocation w0, wordlocation w1
+		where w0.urlid=w1.urlid
+		and w0.wordid=6745
+		and w1.wordid=6746;
+			

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	.container.center-block
+		form(name='f',id="myForm",role='form')
+				p
+					img.img-thumbnail.img-responsive(src='images/any_logo.png',alt='Responsive image')
+				fieldset
+					input.form-control(type='text',value="Type here...",name='wd',id='kw',maxlength='40',autocomplete='off',placeholder='.col-xs-4')
+					button.btn.btn-success(type='submit') Search
+					button.btn.btn-default(type='button',data-toggle='collapse',data-target='#advancedSearch')
+						| Advanced search 
+						span.caret
+					div.collapse(id='advancedSearch')
+						p test advanced search
+	#results.container
+		

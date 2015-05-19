@@ -1,0 +1,7 @@
+mixin messageNotification(element)
+	li(role='presentation')
+		a.message(href='#')
+			img(src!=element.sender.photo, alt='')
+			.details
+				.sender !{element.sender.name}
+				.text !{element.message}

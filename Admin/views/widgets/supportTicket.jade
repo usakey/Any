@@ -1,0 +1,8 @@
+mixin supportTicket(ticket)
+	li(role='presentation')
+		a.support-ticket(href='#')
+			.picture
+				// important, warning, success, info,...
+				span.label(class='label-'+ticket.presentation.label)
+					i.fa(class='fa-'+ticket.presentation.icon)
+			.details !{ticket.details}

@@ -1,0 +1,28 @@
+extends ../layout
+include ../widgets/controller
+
+block content
+	include ../inc/logo
+	+sidebar(args.sidebar)
+	.wrap
+		header.page-header
+			+navbar(args.navbar)
+		.content.container
+			.row
+				.col-md-12
+					h2.page-title
+						| Control Panel
+						small Clustering
+			.row
+				.col-md-8
+					section.widget
+						header
+							h4
+								i.fa.fa-book
+								| Logs
+						pre.body.well.well-sm.pre-scrollable.row.margin-bottom.text-align-left.widget#logcontent
+
+				.col-md-4
+					-var args_controller= {title:'Control panel'}
+					+controller(args_controller,'stopClustering()','startClustering()')
+	script(src='js/clusteringController.js')

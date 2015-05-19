@@ -1,0 +1,31 @@
+mixin nav-panel(elem)
+	if(elem.active)
+		li.active
+			a(href=elem.link)
+				i.fa(class='fa-'+elem.icon)
+				span.name !{elem.title}
+	else
+		li.panel
+			a(class=(elem.submenus?'accordion-toggle collapsed':''),data-toggle=(elem.submenus?'collapse':''), data-parent=(elem.submenus?'#side-nav':''), href=(elem.submenus?'#'+elem.name+'-collapse': elem.link) )
+				i.fa(class='fa-'+elem.icon)
+				span.name !{elem.title}
+			if elem.submenus
+				ul(id=elem.name+'-collapse', class='panel-collapse collapse')
+					each submenu in elem.submenus
+						li(class=(submenu.active?'active':''))
+							a(href=submenu.link)
+								| !{submenu.title} &nbsp;
+								if submenu.extra
+									i.fa(class='fa-'+submenu.extra)
+								if submenu.label
+									span.label(class='label-'+submenu.label.class) !{submenu.label.text}
+
+
+mixin sidebar(args)
+	nav#sidebar.sidebar.nav-collapse.collapse
+		ul#side-nav.side-nav
+			each elem in args
+				+nav-panel(elem)
+		#sidebar-settings.settings
+			button.btn-icons.btn.btn-transparent.btn-sm(type='button', data-value='icons') Icons
+			button.btn-auto.btn.btn-transparent.btn-sm(type='button', data-value='auto') Auto

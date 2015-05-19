@@ -1,0 +1,69 @@
+mixin trafficSources
+	section.widget
+		header
+			h4
+				i.fa.fa-shopping-cart
+				| Traffic Sources
+				small
+					| One month tracking
+		.body
+			table.table.table-striped.no-margin.sources-table
+				thead
+					tr
+						th.source-col-header Source
+						th Amount
+						th Change
+						th.hidden-xs Percent.,%
+						th Target
+						th.chart-col-header.hidden-xs Trend
+				tbody
+					tr
+						td
+							span.label.label-important Direct
+						td 713
+						td
+							strong.color-green +53
+						td.hidden-xs +12
+						td 900
+						td.chart-cell.hidden-xs
+							#direct-trend
+					tr
+						td
+							span.label.label-warning Refer
+						td 562
+						td
+							strong +84
+						td.hidden-xs +64
+						td 500
+						td.chart-cell.hidden-xs
+							#refer-trend
+					tr
+						td
+							span.label.label-success Social
+						td 148
+						td
+							strong.color-red -12
+						td.hidden-xs +3
+						td 180
+						td.chart-cell.hidden-xs
+							#social-trend
+					tr
+						td
+							span.label.label-info Search
+						td 653
+						td
+							strong.color-green +23
+						td.hidden-xs +43
+						td 876
+						td.chart-cell.hidden-xs
+							#search-trend
+					tr
+						td
+							span.label.label-inverse Internal
+						td 976
+						td
+							strong +101
+						td.hidden-xs -7
+						td 844
+						td.chart-cell.hidden-xs
+							#internal-trend

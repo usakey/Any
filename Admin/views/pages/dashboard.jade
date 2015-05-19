@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+	include ../inc/logo
+	+sidebar(args.sidebar)
+	.wrap
+		header.page-header
+			+navbar(args.navbar)
+		.content.container
+			.row
+				.col-md-12
+					h2.page-title
+						| Dashboard
+						small Statistics and more
+			.row
+				.col-md-8
+					+visits
+					+trafficSources
+					+chat(args.chat)
+				.col-md-4
+					+feeds
+					+tabs
+					+serverOverview
+		.content.container.row
+			include ../inc/footer

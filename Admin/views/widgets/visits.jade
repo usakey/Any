@@ -1,0 +1,41 @@
+mixin visits
+	section.widget
+		header
+			h4
+				i.fa.fa-group
+				| Visits
+				small
+					| Based on a three months data
+		.body.no-margin
+			#visits-chart.chart.visits-chart
+				svg
+			.visits-info.well.well-sm
+				.row
+					.col-sm-3.col-xs-6
+						.key
+							i.eicon-users
+							| Total Traffic
+						.value
+							| 24 541
+							i.fa.fa-caret-up.color-green
+					.col-sm-3.col-xs-6
+						.key
+							i.eicon-user
+							| Unique Visits
+						.value
+							| 14 778
+							i.fa.fa-caret-down.color-red
+					.col-sm-3.col-xs-6
+						.key
+							i.fa.fa-plus-square
+							| Revenue
+						.value
+							| $3 583.18
+							i.fa.fa-caret-up.color-green
+					.col-sm-3.col-xs-6
+						.key
+							i.fa.fa-user
+							| Total Sales
+						.value
+							| $59 871.12
+							i.fa.fa-caret-down.color-red

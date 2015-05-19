@@ -1,0 +1,71 @@
+include widgets/messageNotification
+include widgets/supportTicket
+mixin seeAll(text)
+	li(role='presentation')
+		a.text-align-center.see-all(href='#')
+			| See all !{text}
+			i.fa.fa-arrow-right
+
+mixin navbar(args)
+	.navbar
+		ul.nav.navbar-nav.navbar-right.pull-right
+			li.visible-phone-landscape
+				a#search-toggle(href='#')
+					i.fa.fa-search
+			li.dropdown
+				// messages menu
+				a#messages.dropdown-toggle(href='#', title='Messages', data-toggle='dropdown')
+					i.fa.fa-comments
+				ul#messages-menu.dropdown-menu.messages(role='menu')
+						// loads the lattest messages. See routes/index.js for more details
+						-for element in args.lattest_messages
+							+messageNotification(element)
+						+seeAll('messages')
+			li.dropdown
+				// support tickets
+				a.dropdown-toggle(href='#', title='8 support tickets', data-toggle='dropdown')
+					i.fa.fa-group
+					span.count 8
+				ul#support-menu.dropdown-menu.support(role='menu')
+					-for element in args.tickets
+						+supportTicket(element)
+					+seeAll('tickets')
+			li.divider
+			li.hidden-xs
+				// see js/theme/settings.js for more details
+				a#settings(href='#', title='Settings', data-toggle='popover', data-placement='bottom')
+					i.fa.fa-cog
+			li.hidden-xs.dropdown
+				a#account.dropdown-toggle(href='#', title='Account', data-toggle='dropdown')
+					i.fa.fa-user
+				ul#account-menu.dropdown-menu.account(role='menu')
+					li.account-picture(role='presentation')
+						img(src='img/2.jpg', alt='')
+						| Philip Daineka
+					li(role='presentation')
+						a.link(href='form_account.html')
+							i.fa.fa-user
+							| Profile
+					li(role='presentation')
+						a.link(href='component_calendar.html')
+							i.fa.fa-calendar
+							| Calendar
+					li(role='presentation')
+						a.link(href='#')
+							i.fa.fa-inbox
+							| Inbox
+			li.visible-xs
+				a.btn-navbar(href='#', data-toggle='collapse', data-target='.sidebar', title='')
+					i.fa.fa-bars
+			li.hidden-xs
+				a(href='/login')
+					i.fa.fa-sign-out
+		form#search-form.navbar-form.pull-right(action='/index', method='GET',role='search')
+			input.search-query(type='search', name='search_term', placeholder='Search...')
+		.notifications.pull-right
+			.alert.pull-right
+				a.close(href='#', data-dismiss='alert') ×
+				i.fa.fa-info-circle
+				| Check out Light Blue
+				a#notification-link(href='#') settings
+				| on the right!

@@ -1,0 +1,17 @@
+{
+	"sidebar":[
+		{"active":false,"icon":"search","title":"Search","link":"/index"},
+		{"active":false,"icon":"home","title":"Dashboard","link":"/dashboard"},
+		{"active":false,"icon":"desktop","title":"Control Panel","name":"controlpanel",
+		  "submenus": [
+				{"title":"Crawler","link":"/crawler"},
+				{"title":"Indexer","link":"#"},
+				{"title":"Clustering Engine","link":"/clustering"}
+			]}
+		],
+	"navbar": {
+		"lattest_messages": [],
+		"tickets": []
+		},
+	"chat": []
+}

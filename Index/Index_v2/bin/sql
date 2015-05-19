@@ -1,0 +1,1 @@
+create table wordlocation (id integer SERIAL not null primary key,urlid integer not null,wordid integer not null,location integer not null)

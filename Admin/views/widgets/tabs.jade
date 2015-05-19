@@ -1,0 +1,161 @@
+mixin tabs
+	section.widget.widget-tabs
+		header
+			ul.nav.nav-tabs
+				li.active
+					a(href='#stats', data-toggle='tab') Users
+				li
+					a(href='#report', data-toggle='tab') Favorites
+				li
+					a(href='#dropdown1', data-toggle='tab') Commenters
+		.body.tab-content
+			#stats.tab-pane.active.clearfix
+				h5.tab-header
+					i.fa.fa-group
+					| Last logged-in users
+				ul.news-list
+					li
+						img.pull-left.img-circle(src='img/1.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Finees Lund
+							.position Product Designer
+							.time Last logged-in: Mar 20, 18:46
+					li
+						img.pull-left.img-circle(src='img/3.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Erebus Novak
+							.position Software Engineer
+							.time Last logged-in: Mar 23, 9:02
+					li
+						img.pull-left.img-circle(src='img/2.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Leopoldo Reier
+							.position Chief Officer
+							.time Last logged-in: Jun 6, 15:34
+					li
+						img.pull-left.img-circle(src='img/13.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Frans Garey
+							.position Financial Assistant
+							.time Last logged-in: Jun 8, 17:20
+					li
+						img.pull-left.img-circle(src='img/14.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Jessica Johnsson
+							.position Sales Manager
+							.time Last logged-in: Jun 8, 9:13
+			#report.tab-pane
+				h5.tab-header
+					i.fa.fa-star
+					| Popular contacts
+				ul.news-list.news-list-no-hover
+					li
+						img.pull-left.img-circle(src='img/14.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Jessica Johnsson
+							.options
+								button.btn.btn-xs.btn-success
+									i.fa.fa-phone
+									| Call
+								button.btn.btn-xs.btn-warning
+									i.fa.fa-envelope-o
+									| Message
+					li
+						img.pull-left.img-circle(src='img/13.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Frans Garey
+							.options
+								button.btn.btn-xs.btn-success
+									i.fa.fa-phone
+									| Call
+								button.btn.btn-xs.btn-warning
+									i.fa.fa-envelope-o
+									| Message
+					li
+						img.pull-left.img-circle(src='img/3.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Erebus Novak
+							.options
+								button.btn.btn-xs.btn-success
+									i.fa.fa-phone
+									| Call
+								button.btn.btn-xs.btn-warning
+									i.fa.fa-envelope-o
+									| Message
+					li
+						img.pull-left.img-circle(src='img/2.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Leopoldo Reier
+							.options
+								button.btn.btn-xs.btn-success
+									i.fa.fa-phone
+									| Call
+								button.btn.btn-xs.btn-warning
+									i.fa.fa-envelope-o
+									| Message
+					li
+						img.pull-left.img-circle(src='img/1.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Finees Lund
+							.options
+								button.btn.btn-xs.btn-success
+									i.fa.fa-phone
+									| Call
+								button.btn.btn-xs.btn-warning
+									i.fa.fa-envelope-o
+									| Message
+			#dropdown1.tab-pane
+				h5.tab-header
+					i.fa.fa-comments
+					| Top Commenters
+				ul.news-list
+					li
+						img.pull-left.img-circle(src='img/13.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Frans Garey
+							.comment
+								| Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+								| sed quia
+					li
+						img.pull-left.img-circle(src='img/1.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Finees Lund
+							.comment
+								| Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+								| eu fugiat.
+					li
+						img.pull-left.img-circle(src='img/14.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Jessica Johnsson
+							.comment
+								| Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+								| deserunt.
+					li
+						img.pull-left.img-circle(src='img/3.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Erebus Novak
+							.comment
+								| Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
+								| doloremque.
+					li
+						img.pull-left.img-circle(src='img/2.jpg', alt='')
+						.news-item-info
+							.name
+								a(href='#') Leopoldo Reier
+							.comment
+								| Laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis
+								| et quasi.

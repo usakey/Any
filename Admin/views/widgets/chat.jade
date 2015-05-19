@@ -1,0 +1,28 @@
+mixin chatMessage(elem)
+	.chat-message
+		.sender(class='pull-'+(elem.pulltoleft? 'left': 'right') )
+			.icon
+				img.img-circle(src!=elem.sender.photo, alt='')
+			.time !{elem.time}
+		.chat-message-body(class= (elem.pulltoleft?'':'on-left') )
+			span.arrow
+			.sender
+				a(href='#') !{elem.sender.name}
+			.text !{elem.message}
+
+mixin chat(args)
+	section.widget.large
+		header
+			h4
+				i.eicon-chat
+				| Chat
+		.body
+			#chat.chat
+				#chat-messages.chat-messages
+					each elem in args
+						+chatMessage(elem)
+				footer.chat-footer.row
+					.col-xs-9
+						input#new-message.form-control.input-transparent(type='text', placeholder='Enter your message..')
+					.col-xs-3
+						button#new-message-btn.btn.btn-transparent.btn-block(type='button') Send
